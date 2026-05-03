@@ -8,7 +8,7 @@ import (
 	"lab3-detector/internal/stats"
 )
 
-var LeakCache = make(map[string][]byte)
+var LeakCache = make(map[string][]byte) // КОНФЛІКТНА ЗМІНА З MAIN
 
 // 1. ОПТИМІЗАЦІЯ: Компілюємо регулярку один раз глобально
 var imageRegexp = regexp.MustCompile(`^image_data_\d+_timestamp_\d+$`)
